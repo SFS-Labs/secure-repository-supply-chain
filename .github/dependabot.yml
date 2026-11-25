@@ -4,15 +4,7 @@ updates:
     directory: "/"
     schedule:
       interval: "monthly"
-
-  # Keep the AttendeeSite npm project patched. Scoped to the axios 0.33.x line so
-  # the two open axios advisories (GHSA-7q8q-rj6j-mhjq, GHSA-mmx7-hfxf-jppx;
-  # first patched 0.33.0 on 0.x) are fixed by a Dependabot-authored pull request.
-  - package-ecosystem: "npm"
-    directory: "/code/src/AttendeeSite"
+  - package-ecosystem: "nuget"
+    directory: "/code/"
     schedule:
       interval: "weekly"
-    allow:
-      - dependency-name: "axios"
-        versions: ["0.33.x"]
-    open-pull-requests-limit: 1
